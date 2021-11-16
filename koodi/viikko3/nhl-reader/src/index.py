@@ -1,12 +1,13 @@
 import requests
 from player import Player
 
+
 def main():
     url = "https://nhlstatisticsforohtu.herokuapp.com/players"
     response = requests.get(url).json()
 
     #print("JSON-muotoinen vastaus:")
-    #print(response)
+    # print(response)
 
     players = []
 
@@ -21,8 +22,10 @@ def main():
 
             players.append(player)
 
+    players = sorted(players, key=Player.p_sort, reverse=True)
     for player in players:
         print(player)
+
 
 if __name__ == "__main__":
     main()
