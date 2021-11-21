@@ -44,6 +44,6 @@ Set Password
     Input Password  password  ${password}
 
 Create User And Go To Login Page
-    Create User  kalle  kalle123
+    Create User  kalle  kalle123  kalle123
     Go To Login Page
     Login Page Should Be Open

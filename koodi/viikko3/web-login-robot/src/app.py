@@ -79,6 +79,9 @@ def handle_register():
     password = request.form.get("password")
     password_confirmation = request.form.get("password_confirmation")
 
+    print("PASS ", password)
+    print("PASS CONF ", password_confirmation)
+
     try:
         user_service.create_user(username, password, password_confirmation)
         return redirect_to_welcome()
