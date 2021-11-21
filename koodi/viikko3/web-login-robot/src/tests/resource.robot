@@ -3,7 +3,8 @@ Library  SeleniumLibrary
 Library  ../AppLibrary.py
 
 *** Variables ***
-${SERVER}  localhost:5000
+# ${SERVER}  localhost:5000
+${SERVER}  127.0.0.1:5000
 ${BROWSER}  chrome
 ${DELAY}  0.5 seconds
 ${HOME URL}  http://${SERVER}
@@ -24,3 +25,9 @@ Main Page Should Be Open
 
 Go To Login Page
     Go To  ${LOGIN URL}
+
+Go To Main Page
+    Go To  ${HOME URL}
+
+Register Page Should Be Open
+    Title Should Be  Register
