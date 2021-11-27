@@ -24,16 +24,18 @@ class Ostoskori:
 
     def lisaa_tuote(self, lisattava: Tuote):
         # lisää tuotteen
-        tuote_korissa = next((ostos for ostos in self.kori if ostos.tuotteen_nimi() == lisattava.nimi()), None)
-        if tuote_korissa is None:
+        ostos_korissa = next((ostos for ostos in self.kori if ostos.tuotteen_nimi() == lisattava.nimi()), None)
+        if ostos_korissa is None:
             self.kori.append(Ostos(lisattava))
         else:
-            tuote_korissa.muuta_lukumaaraa(1)
+            ostos_korissa.muuta_lukumaaraa(1)
 
     def poista_tuote(self, poistettava: Tuote):
         # poistaa tuotteen
-        tuote_korissa = next((ostos for ostos in self.kori if ostos.tuotteen_nimi() == poistettava.nimi()), None)
-        tuote_korissa.muuta_lukumaaraa(-1)
+        ostos_korissa = next((ostos for ostos in self.kori if ostos.tuotteen_nimi() == poistettava.nimi()), None)
+        ostos_korissa.muuta_lukumaaraa(-1)
+        if ostos_korissa.lukumaara() == 0:
+            self.kori.remove(ostos_korissa)
 
     def tyhjenna(self):
         pass
