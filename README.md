@@ -7,3 +7,5 @@
 [Viikon 2 tehtävät](./koodi/viikko2)
 
 [Viikon 3 tehtävät](./koodi/viikko3)
+
+[Viikon 4 tehtävät](./koodi/viikko4)
