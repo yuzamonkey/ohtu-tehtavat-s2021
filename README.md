@@ -9,3 +9,5 @@
 [Viikon 3 tehtävät](./koodi/viikko3)
 
 [Viikon 4 tehtävät](./koodi/viikko4)
+
+[Viikon 4 tehtävät](./koodi/viikko5)
