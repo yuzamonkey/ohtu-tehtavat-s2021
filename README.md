@@ -13,3 +13,5 @@
 [Viikon 5 tehtävät](./koodi/viikko5)
 
 [Viikon 6 tehtävät](./koodi/viikko6)
+
+[Viikon 7 tehtävät](./koodi/viikko7)
